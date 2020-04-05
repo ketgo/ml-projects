@@ -1,0 +1,13 @@
+keras
+keras-applications
+keras-preprocessing
+plaidml-keras
+h5py
+sklearn
+numpy
+scipy
+matplotlib
+seaborn
+opencv-python
+pillow
+pydrive
