@@ -1,6 +1,6 @@
 # ML-projects
 
-Collection of machine learning projects. Each project is within its own folder.
+Collection of machine learning projects. Each project is within its own sub-folder inside `Projects`.
 
 ## Jupter Deployment
 
