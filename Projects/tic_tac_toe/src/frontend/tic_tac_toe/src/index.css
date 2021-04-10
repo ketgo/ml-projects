@@ -49,6 +49,11 @@ ol, ul {
   margin-left: 20px;
 }
 
-.selected {
+.move {
+  background: #fff;
+  border: 1px solid #999;
+}
+
+.currentMove {
   border: 2px solid rgb(0, 0, 255);
 }

@@ -50,7 +50,7 @@ export default class Game extends React.Component {
             return (
                 <li key={move}>
                     <button
-                        className={this.state.stepNumber === move ? 'selected' : ''}
+                        className={this.state.stepNumber === move ? 'currentMove' : 'move'}
                         onClick={() => this.jumpTo(move)}>
                         {desc}
                     </button>
