@@ -1,7 +1,0 @@
-# Common packages
-torch
-torchvision
-
-# Testing Packages
-pytest
-pytest-cov
