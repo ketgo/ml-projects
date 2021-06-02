@@ -3,6 +3,8 @@
 """
 
 import os.path
+
+import swifter
 import numpy as np
 import pandas as pd
 import librosa
@@ -98,3 +100,13 @@ def load_labels(data_path, nrows=None):
     df = pd.read_csv(data_path + "/train_soundscape_labels.csv", nrows=nrows)
 
     return df
+
+
+def load_audio_duration(row):
+    """
+        Get audio duration.
+    """
+    y = load_short_audio(row["primary_label"], row["filename"], DATA_PATH + '/train_short_audio', SAMPLE_RATE)
+    if y is not None:
+        return librosa.get_duration(y=y, sr=SAMPLE_RATE)
+    return 0
