@@ -70,8 +70,12 @@ def load_soundscape_audio(row_id, data_path, sr=None, **kwargs):
         m = re.search("([0-9]{2}[0-9]{2}[0-9]{4})", name)
         return m.groups()[0]
 
-    for name in glob.glob(file_path):
-        yield extract_date(name), load_ogg(name, sr, **kwargs)
+    files = glob.glob(file_path)
+    if not files:
+        raise FileNotFoundError()
+    name = files[0]
+
+    return extract_date(name), load_ogg(name, sr, **kwargs)
 
 
 def load_metadata(data_path, nrows=None, col=METADATA_COLUMNS, audio_duration=True):
